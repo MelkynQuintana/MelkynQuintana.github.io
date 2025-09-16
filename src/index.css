@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+
+/* ------------------------------------------ *\
+ * BASE
+\* ------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-zinc-900 text-zinc-50;
+}
+
+/* ------------------------------------------ *\
+ * COMPONENTS
+\* ------------------------------------------ */
+
+/* Menu btn */
+@layer utilities {
+  /* WebKit browsers (Chrome, Edge, Safari) */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f4f4f5; /* zinc-100 */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #a1a1aa; /* zinc-400 */
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #71717a; /* zinc-500 */
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #a1a1aa #f4f4f5;
+  }
+}
+
