@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://MelkynQuintana.github.io",
+  "homepage": "https://melkynquintana.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -36,3 +36,4 @@
     "vite": "^7.1.2"
   }
 }
+
