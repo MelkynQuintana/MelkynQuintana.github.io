@@ -17,14 +17,14 @@ export const LanguageToggleButton = ({ className }) => {
       {lang === "en" ? (
         // Show 🇨🇴 when in English (click to switch Spanish)
         <>
-          <img src="../../public/images/colombia_flag.webp" 
+          <img src="/images/colombia_flag.webp" 
           alt="Colombian Flag" 
           className="h-full w-full object-cover" />
         </>
       ) : (
         // Show 🇺🇸/🇬🇧 when in Spanish (click to switch English)
         <>
-          <img src="../../public/images/usauk.png" 
+          <img src="/images/usauk.png" 
           alt="US/UK Flag" 
           className="h-full w-full object-cover" />
         </>
