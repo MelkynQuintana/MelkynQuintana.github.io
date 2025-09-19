@@ -194,7 +194,7 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-4 py-4 text-sm font-normal text-black">
       <img
-        src="../public/images/saturn.png"
+        src="/images/saturn.png"
         alt="logo"
         width={40}
         height={40} />

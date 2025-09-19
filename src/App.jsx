@@ -75,9 +75,9 @@ export function NavbarDemo() {
 
           {/* Profile Section (First Column)*/}
 
-          <div className="flex flex-col items-center text-center ml-30 mt-30">
+          <div className="flex flex-col items-center justify-items-center text-center md:ml-30 mt-30">
             <img
-              src="../public/images/profile.jpeg" // <-- replace with your image path
+              src="/images/profile.jpeg" // <-- replace with your image path
               alt="My Profile"
               className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-lg"
             />
@@ -124,7 +124,7 @@ export function NavbarDemo() {
             </p>
 
             <div className="mt-8 flex items-center justify-center">
-              <DownloadButton onClick={() => window.open("../public/docs/CV_EN_MelkynQuintana.pdf", "_blank")} />
+              <DownloadButton onClick={() => window.open("/CV_EN_MelkynQuintana.pdf", "_blank")} />
             </div>
 
             <div className="mt-8 flex items-center gap-3">
@@ -212,9 +212,9 @@ function App() {
         </div>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mb-30"> 
-          <ProjectCard title="Project 1" />
-          <ProjectCard title="Project 2" />
-          <ProjectCard title="Project 3" />
+          <ProjectCard title="⚒️ Building..." />
+          <ProjectCard title="⚒️ Building..." />
+          <ProjectCard title="⚒️ Building..." />
         </div>
 
       </section>
