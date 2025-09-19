@@ -23,10 +23,15 @@ import { StarsBackground } from "./components/ui/stars-background";
 import { DownloadButton, GradientButton } from "./components/ui/buttons"; 
 import { InfoCard, SkillCard, ProjectCard } from "./components/ui/cards";
 import { FaGithub, FaLinkedin, FaEnvelope, FaAddressCard, FaGraduationCap, FaCode, FaCodeBranch } from "react-icons/fa";
+import { useTranslation } from "./i18n";
+import { LanguageToggleButton } from "./components/ui/translation-button";
 
 export function NavbarDemo() {
+
+  const { lang, setLang, t } = useTranslation();
+
   const navItems = [
-    { name: "Projects", link: "#projects" },
+    { name: t("projects"), link: "#projects" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -39,6 +44,7 @@ export function NavbarDemo() {
         <NavBody className="hidden md:flex items-center justify-between px-6 py-4">
           <NavbarLogo />
           <NavItems items={navItems} />
+          <LanguageToggleButton className="ml-4" />
         </NavBody>
 
         {/* Mobile Navigation */}
@@ -55,6 +61,13 @@ export function NavbarDemo() {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
+
+            {/* Language toggle row */}
+            <div className="px-4 py-2 border-b border-slate-700 flex justify-between items-center w-full">
+              <span className="text-neutral-600 text-sm">{t("language")}</span>
+              <LanguageToggleButton />
+            </div>
+
             {navItems.map((item, idx) => (
               <a
                 key={`mobile-link-${idx}`}
@@ -85,14 +98,13 @@ export function NavbarDemo() {
               Melkyn Quintana
             </h2>
             <h6 className="text-md md:text-lg text-gray-500 max-w-md">
-              (He / Him)
+              {t("pronouns")}
             </h6>
             <h3 className="mt-3 text-2xl font-bold md:text-lg text-gray-300 max-w-md">
-              Senior Astronomy Student
+              {t("profile_role")}
             </h3>
             <h4 className="mt-3 text-md font-bold md:text-lg text-gray-400 max-w-md">
-
-              University of Antioquia
+              {t("university")}
             </h4>
 
             <div className="flex mt-10 gap-6">
@@ -115,16 +127,25 @@ export function NavbarDemo() {
 
               {/* Text */}
               <h2 className="text-3xl font-bold text-white">
-                About Me
+                {t("about_me")}
               </h2>
             </div>
 
             <p className="mt-4 text-lg text-gray-300">
-              I am a senior astronomy student with strong mathematics, physics, statistics, data analysis, and Python programming skills. Through my studies, I have acquired great learning and problem-solving skills, which allow me to adapt easily to new work and collaboration environments.
+              {t("about_me_paragraph")}
             </p>
 
             <div className="mt-8 flex items-center justify-center">
-              <DownloadButton onClick={() => window.open("/CV_EN_MelkynQuintana.pdf", "_blank")} />
+              <DownloadButton
+                onClick={() =>
+                  window.open(
+                    lang === "en"
+                      ? "/CV_MelkynQuintana_EN.pdf"
+                      : "/CV_MelkynQuintana_ES.pdf",
+                    "_blank"
+                  )
+                }
+              />
             </div>
 
             <div className="mt-8 flex items-center gap-3">
@@ -135,15 +156,15 @@ export function NavbarDemo() {
 
               {/* Text */}
               <h2 className="text-3xl font-bold text-white">
-                Education
+                {t("education")}
               </h2>
             </div>
 
             <div className="mt-4">
               <InfoCard
                 icon={FaGraduationCap}
-                title="BS Astronomy"
-                subtitle="University of Antioquia"
+                title={t("bs_astronomy")}
+                subtitle={t("university")}
               />
             </div>
 
@@ -155,7 +176,7 @@ export function NavbarDemo() {
 
               {/* Text */}
               <h2 className="text-2xl font-bold text-white">
-                Skills & Technologies
+                {t("skills_tech")}
               </h2>
 
             </div>
@@ -190,6 +211,9 @@ export function NavbarDemo() {
 }
 
 function App() {
+
+  const { lang, setLang, t } = useTranslation();
+
   return (
     <div>
       <NavbarDemo />
@@ -206,15 +230,15 @@ function App() {
 
           {/* Text */}
           <h1 className="text-3xl font-bold text-white">
-            Projects
+            {t("projects")}
           </h1>
 
         </div>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mb-30"> 
-          <ProjectCard title="⚒️ Building..." />
-          <ProjectCard title="⚒️ Building..." />
-          <ProjectCard title="⚒️ Building..." />
+          <ProjectCard title={t("temp_message")} />
+          <ProjectCard title={t("temp_message")} />
+          <ProjectCard title={t("temp_message")} />
         </div>
 
       </section>

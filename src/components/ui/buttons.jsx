@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFileDownload } from "react-icons/fa";
+import { useTranslation } from "../../i18n";
 
 export const GradientButton = ({ icon: Icon, variant = "indigo", onClick, className = "" }) => {
   const gradients = {
@@ -33,13 +34,16 @@ export const GradientButton = ({ icon: Icon, variant = "indigo", onClick, classN
 
 
 export const DownloadButton = ({ onClick, className = "" }) => {
+
+  const { lang, setLang, t } = useTranslation();
+
   return (
     <button
       onClick={onClick}
       className={`px-8 py-2 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center gap-2 transition transform duration-200 hover:scale-105 hover:bg-neutral-300 hover:text-neutral-950 border-2 border-transparent hover:border-slate-900 relative z-10 ${className}`}
     >
       <FaFileDownload className="w-5 h-5" />
-      <span>Download CV</span>
+      <span>{t("download_cv")}</span>
     </button>
   );
 };
