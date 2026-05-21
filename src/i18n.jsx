@@ -35,8 +35,17 @@ const translations = {
     pronouns: "(Él)",
     profile_role: "Estudiante de Astronomía",
     about_me: "Sobre mí",
-    about_me_paragraph:
-      "Soy estudiante de último año de astronomía con sólidas habilidades en matemáticas, física, estadística, análisis de datos y programación en Python. A través de mis estudios he desarrollado grandes capacidades de aprendizaje y resolución de problemas, lo que me permite adaptarme con facilidad a nuevos entornos de trabajo y colaboración.",
+    about_me_paragraph: (
+    <>
+    Soy astrónomo de la Universidad de Antioquia, cuento con una sólida formación en
+    matemáticas, física, estadística e informática científica. Mi investigación se centra en
+    la estimación de parámetros cosmológicos utilizando datos de supernovas de tipo Ia, explorando específicamente
+    la tensión de Hubble mediante inferencia bayesiana y métodos MCMC.
+    <br />
+    Me apasiona comprender la estructura a gran escala del universo y cómo
+    un buen analisis y tratamiento de los datos pueden revelar tanta información tanto en la ciencia como en la vida cotidiana.
+    </>
+    ),
     download_cv: "Descargar CV",
     education: "Educación",
     bs_astronomy: "Pregrado en Astronomía",
