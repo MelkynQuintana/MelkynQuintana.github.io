@@ -5,7 +5,7 @@ const translations = {
   en: {
     name: "Melkyn Quintana",
     pronouns: "(He / Him)",
-    profile_role: "Senior Astronomy Student",
+    profile_role: "Astronomer",
     about_me: "About Me",
     about_me_paragraph: (
     <>
@@ -33,7 +33,7 @@ const translations = {
   es: {
     name: "Melkyn Quintana",
     pronouns: "(Él)",
-    profile_role: "Estudiante de Astronomía",
+    profile_role: "Astrónomo",
     about_me: "Sobre mí",
     about_me_paragraph: (
     <>
