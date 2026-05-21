@@ -8,7 +8,9 @@ const translations = {
     profile_role: "Senior Astronomy Student",
     about_me: "About Me",
     about_me_paragraph:
-      "I am a senior astronomy student with strong mathematics, physics, statistics, data analysis, and Python programming skills. Through my studies, I have acquired great learning and problem-solving skills, which allow me to adapt easily to new work and collaboration environments.",
+      "I'm an astronomy graduate from the University of Antioquia with a strong foundation in mathematics, physics, statistics, and scientific computing. My research focuses on cosmological parameter estimation using Type Ia Supernovae data — specifically exploring the Hubble tension through Bayesian inference and MCMC methods.
+
+I'm passionate about understanding the large-scale structure of the universe, and how the data can reveal so much information both in science and in matters of daily life.",
     download_cv: "Download CV",
     education: "Education",
     bs_astronomy: "BS Astronomy",
